@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="../third_party/d3/d3.min.js"></script>
+</head>
+<body>
+<script>
+			var NEW_RATE_AVAILABLE = true;
+			var RATE_FACTOR = 0.1;
+			var SETTING_RATE = false;
+			
+			function updateRate(rate) {
+				RATE_FACTOR = rate / 10;
+				NEW_RATE_AVAILABLE = true;
+				}
+										
+			function startSetRate() {
+				SETTING_RATE = true;
+				}
+
+			function endSetRate() {
+				SETTING_RATE = false;
+				}
+			</script>
+								
+			<svg id="wagonWheel" class="svgWithText" width="160" height="170" style="position:absolute;top:40%;left:44%;"></svg>
+
+			<script type="text/javascript" src="../js/wagon_wheel.js"></script>
+
+			<div class="controls"  style="position:absolute;top:77%;left:44%">
+				<input type=range min=0 max=9.5 value=0.1 id=rateSlider step=0.1 oninput="updateRate(value);" onMouseDown="startSetRate();" onMouseUp="endSetRate();">
+			</div>
+
+			<svg id="polarRepresentation" class="svgWithText" width="270" height="270" style="position:absolute;top:14%;left:7%; padding:0px"></svg>
+			<script type="text/javascript" src="../js/polar_representation.js"></script>
+
+
+			<svg id="euler" class="svgWithText" width="270" height="310" style="position:absolute;top:5%;left:73%;"></svg>
+			<script type="text/javascript" src="../js/euler.js"></script>
+
+
+	
+
+
+</body>
+</html>
+<script src="../play/js/Mouse.js"></script>
+<script src="../play/js/minpubsub.js"></script>
+<script src="../play/js/Loader.js"></script>
+<script src="splash.js"></script>
