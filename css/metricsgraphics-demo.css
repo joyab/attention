@@ -32,6 +32,11 @@ body {
     font-family: 'Open Sans', sans-serif, Arial;
 }
 
+.part
+{
+font-size:1.8em;color:steelblue;
+}
+
 .btn-group {
     display: inline-block;
     margin-left: 3px;
@@ -49,7 +54,7 @@ body {
 }
 
 .data-column {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     margin: 0;
     position: absolute;
     right: 0;
@@ -75,7 +80,7 @@ body {
 }
 
 .footer {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     padding: 40px;
     text-align: center;
 }
@@ -119,7 +124,7 @@ html {
 }
 
 .legend {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     padding: 25px 0 15px 0;
 }
 

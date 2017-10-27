@@ -54,105 +54,7 @@
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src='js/metricsgraphics.min.js'></script>
 	<!--<script src='js/addons/mg_line_brushing.js'></script>-->
-
-
-    <script>
-
-		d3.json('data/hidfig.json', function(data){
-		    for (var i = 0; i < data.length; i++) {
-		        data[i] = MG.convert.date(data[i], 'date');
-		    };
-		    MG.data_graphic({
-		        title: "Chart of Attention",
-		        data: [data[0], data[1]],
-		        width: 600,
-		        height: 200,
-		        right: 40,
-		        target: '#hid-fig',
-		        legend: ['Katherine Johnson','John Glenn'],
-		        legend_target: 'div#custom-color-key',
-		        colors: ['purple', 'green'],
-		        aggregate_rollover: true,
-		        animate_on_load: true,
-		        linked: true,
-		        decimals: 0,
- 
-		    });
-			})
-
-
-		d3.json('data/hidfig.json', function(data){
-		    for (var i = 0; i < data.length; i++) {
-		        data[i] = MG.convert.date(data[i], 'date');
-		    };
-
-
-		    var markers = [{
-		        'date': new Date('2015-01-01T00:00:00.000Z'),
-		        'label': 'Medal of Freedom'
-		    }, {
-		        'date': new Date('2016-01-01T00:00:00.000Z'),
-		        'label': 'Hidden Figures'
-		    }];
-
-
-		    MG.data_graphic({
-		        data: data[0],
-		        width: 600,
-		        height: 200,
-		        right: 40,
-		        target: '#kath',
-		        colors: ['purple'],
-		        linked: true,
-		        markers: markers,
-		        show_rollover_text: true,
-		        animate_on_load: true,
-		        interpolate: d3.curveLinear,
-		        min_x: new Date('2011-01-01'),
-       			decimals: 1,
-		    });
-			})
-
-
-		d3.json('data/hidfig.json', function(data){
-		    for (var i = 0; i < data.length; i++) {
-		        data[i] = MG.convert.date(data[i], 'date');
-		    };
-
-
-		    var markers = [{
-		        'date': new Date('2012-01-01T00:00:00.000Z'),
-		        'label': 'Medal of Freedom'
-		    }, {
-		        'date': new Date('2016-01-01T00:00:00.000Z'),
-		        'label': 'Hidden Figures'
-		    }];
-
-
-		    MG.data_graphic({
-		        data: data[1],
-		        width: 600,
-		        height: 200,
-		        right: 40,
-		        target: '#glenn',
-		        colors: ['green'],
-		        linked: true,
-		        markers: markers,
-		        show_rollover_text: true,
-		        animate_on_load: true,
-		        interpolate: d3.curveLinear,
-		        min_x: new Date('2011-01-01'),
-       			decimals: 1,
-		    });
-			})
-
-
-
-
-
-
-
-    </script>
+	<script src='js/dataviz.js'></script>
 
 
 
@@ -190,55 +92,81 @@ MOTIVATION
 <div class="sim-intro">
 	
 	<p class="caption" style="margin-top:30px">
-		<b><span style="font-size:1.8em;color:steelblue;">MOTIVATION</span><br>
-			
+		<b><span class="part">MOTIVATION</span><br>	
 		</b>
+	</p>
+	<br/>
+	<p>
 
-		Symbolic Annihilation
+		History highlights the collective glory of grand achievements, but the individual contributions of women tend to receive less attention than the contribution of men. Hidden Figures, a successful Hollywood film, celebrates the contributions of female mathematicians Katherine Johnson and her colleagues whose technical efforts made it possible for astronauts like John Glenn reach the frontiers of space.  The charts below compare the Guardian’s coverage of these two historic figures before and after the announcement of the movie.
 
 	</p>
-	
-	<div id="hid-fig"></div>
-	<div class='col-lg-7 text-center' id='custom-colors'></div>
-	<div class='text-center legend' id='custom-color-key'></div>
-	
-
-
-	<div id="kath"></div>
-	<div id="glenn"></div>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/RK8xHq6dfAo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+	<br/>
 
 </div>
 
 
+<!-- - - - - - - - - 
 
+PART 1
 
+- - - - - - - - - -->
 
+<div class="banner">
+
+</div>
 
 <div class="sim-intro">
-	
+
 	<p class="caption" style="margin-top:30px">
-		<b><span style="font-size:1.8em;color:steelblue;">PATH THROUGH MATH</span><br>
-			From counting numbers to charting orbits
+		<b><span class="part">21st Century Guardian Coverage of
+	 	<br/>Katherine Johnson and John Glenn</span>
 		</b>
 
-
 	</p>
+	<strong>
+		<div id="hid-fig"></div>
+		<div class='col-lg-7 text-center' id='custom-colors'></div>
+		<div class='text-center legend' id='custom-color-key'></div>
+	</strong>
+</div>
+
+
+<!-- - - - - - - - - 
+
+PART 2
+
+- - - - - - - - - -->
+
+
+<div class="banner">
+</div>
+
+<div class="sim-intro">
+
+	<p class="caption" style="margin-top:30px">
+	<b><span class="part">Attention Boosts</span></b>
+	</p>
+	<img src="img/mof.png" width="650px">
+	<strong>
+		<div id="kath"></div>
+		<div id="glenn"></div>
+	<strong>
 
 </div>
+
+
 
 
 
 <!-- - - - - - - - - 
 
-PART I:
-
+END
 
 - - - - - - - - - -->
 
-
-
-
-<<div id="end">
+<div id="end">
 
 	<div style="text-align:center; color:#fff;">
 		Made with Patience, Hope, and Love	
